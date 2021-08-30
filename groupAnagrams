@@ -1,0 +1,14 @@
+def groupAnagrams(strsList):
+    anagrams = collections.defaultdict(list)
+    
+    for word in strsList:
+        anagrams[''.join(sorted(word))].append(word)
+    
+    return list(anagrams.values())
+    
+    
+    
+    
+print(groupAnagrams(['ate','eat','tea', 'ant','nat', 'bat']))
+
+# 결과 : [['ate', 'eat', 'tea'], ['ant', 'nat'], ['bat']]
